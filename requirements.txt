@@ -1,6 +1,6 @@
-asgiref
-Django
-Python-dateutil
-six
-sqlparse
-tzdata
+asgiref==3.8.1  # Replace with the latest version
+Django==5.1.4   # Replace with the latest version
+python-dateutil==2.8.2  # Replace with the latest version
+six==1.16.0  # Replace with the latest version
+sqlparse==0.4.4  # Replace with the latest version
+tzdata==2023.3  # Replace with the latest version
