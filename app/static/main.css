@@ -1,0 +1,90 @@
+/* Styling the header container */
+.header {
+    background-color: transparent; /* Set a background color */
+    text-align: center; /* Center the text inside the header */
+    padding: 20px; /* Add padding around the header */
+    border-radius: 10px; /* Optional: Round the corners */
+    margin: 20px 0; /* Add some margin above and below the header */
+}
+
+/* Styling the h1 inside the header */
+.header h1 {
+    font-size: 36px; /* Increase the font size */
+    color: black; /* Set a dark color for the text */
+    font-family: "Bebas Neue", serif; /* Set the font family */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase;
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+/* Background image for the entire page */
+body {
+    background-color: rgb(138, 159, 254);
+    background-size: cover;  /* Ensures the image covers the whole background */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -40px; /* Adjust the distance from the image */
+    width: 100%;
+}
+
+/* Styling for question titles */
+.question p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question p {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+.answer li {
+        padding: 8px 0;
+        cursor: pointer;
+    }
+
+
+/* Custom button styling */
+.submit-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* For a nicer margin between the radio button options */
+ul.answers li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Optional: Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .header h1 {
+        font-size: 28px; /* Reduce font size on smaller screens */
+    }
+}

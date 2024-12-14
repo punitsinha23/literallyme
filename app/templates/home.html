@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Quiz Page {% endblock %}
+
+{% block content %}
+<div style="max-width: 800px; margin: auto; padding: 20px; font-family: Arial, sans-serif;">
+    <form id="quizForm">
+        <!-- Question 1 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">How do you spend your ideal weekend?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q1" value="0"> Alone, catching up on reading or reflecting</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q1" value="50"> Out and about, making connections or networking.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q1" value="10"> Pursuing a passion project or hobby</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q1" value="30"> Doing something risky or adventurous</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q1" value="90"> Dealing with the chaos that life throws at me</li>
+            </ul>
+        </div>
+
+        <!-- Question 2 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">What motivates you the most?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q2" value="40"> Justice and doing what’s right</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q2" value="50"> Achieving greatness or leaving a legacy</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q2" value="0"> Finding meaning or purpose in life</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q2" value="10"> Revenge or proving people wrong</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q2" value="0"> Love and personal connections</li>
+            </ul>
+        </div>
+
+        <!-- Question 3 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">How do you handle conflict?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q3" value="0"> I avoid it at all costs.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q3" value="30"> I confront it head-on, even if it gets messy.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q3" value="22"> I try to outsmart my opponent </li>    
+                <li style="margin: 8px 0;"><input type="radio" name="q3" value="60"> I shut down emotionally and walk away</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q3" value="45"> I lose my temper and act impulsively</li>
+            </ul>
+        </div>
+
+        <!-- Question 4 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">Pick a favorite drink:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q4" value="30"> Coffee – black and strong, just like my soul.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q4" value="45"> Whiskey – the classic choice.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q4" value="80"> Soda – I need that sugar kick.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q4" value="0"> Water – stay hydrated, folks.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q4" value="50"> Whatever is in front of me at the moment.</li>
+            </ul>
+            </ul>
+        </div>
+
+        <!-- Question 5 -->
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">Which of these quotes resonates with you the most?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q5" value="100"> “I don’t know if I’m unhappy because I’m not free, or if I’m not free because I’m unhappy.”</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q5" value="0"> “The world only makes sense if you force it to.”</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q5" value="40"> “I have nothing left to lose.”</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q5" value="40"> “In my dream, the world had suffered a terrible disaster.”</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q5" value="50"> “Why do we fall? So we can learn to pick ourselves up.”</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">How do you typically feel in a crowd?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q6" value="20"> Isolated, like no one understands me.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q6" value="20"> Comfortable – I blend right in.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q6" value="30"> Restless – I’d rather be anywhere else.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q6" value="0"> Powerful – the world feels like my stage.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q6" value="90"> Anxious – it’s overwhelming.</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">What’s your relationship with authority?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q7" value="40"> I distrust it completely.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q7" value="2"> I challenge it whenever possible.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q7" value="80"> I follow the rules to avoid trouble.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q7" value="70"> I secretly manipulate it to my advantage.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q7" value="50"> I am the authority</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">Pick an animal companion:</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q8" value="30"> A loyal dog – dependable and protective.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q8" value="20"> A mysterious cat – independent and aloof.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q8" value="80"> A hawk – sharp and vigilant.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q8" value="40"> A snake – misunderstood but powerful.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q8" value="40"> I work alone, no companions needed.</li>
+            </ul>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">How do you respond to failure?</p>
+            <ul class="answers">
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q9" value="50"> I analyze what went wrong and try again.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q9" value="20"> I spiral into self-doubt but eventually recover.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q9" value="90"> I take it personally and seek to prove everyone wrong.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q9" value="40"> I shrug it off – it’s just part of life.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q9" value="30"> I get frustrated but move on.</li>
+            </ul>
+        </div>
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+            <p style="font-size: 16px; font-weight: bold;">What’s your ideal soundtrack?</p>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 8px 0;"><input type="radio" name="q10" value="50"> Classical music or jazz – something timeless.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q10" value="90"> Heavy metal or rock – intense and raw.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q10" value="30"> Synthwave or lo-fi – modern and moody.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q10" value="40"> Pop hits – catchy and upbeat.</li>
+                <li style="margin: 8px 0;"><input type="radio" name="q10" value="20"> Silence – I don’t need distractions.</li>
+            </ul>    
+
+        </div>
+        <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+    </form>
+</div>
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const ranges = [
+            { name: "Travis Bickle", min: 1, max: 10, image: "{% static 'travis.jpeg' %}" },
+            { name: "Tyler Durden", min: 11, max: 20, image: "{% static 'tyler.jpeg' %}" },
+            { name: "Walter White", min: 21, max: 30, image: "{% static 'walt.jpeg' %}" },
+            { name: "Joker", min: 31, max: 40, image: "{% static 'joker.jpeg' %}" },
+            { name: "Saul Goodman", min: 41, max: 50, image: "{% static 'saul.jpeg' %}" },
+            { name: "Sebastian (La La Land)", min: 51, max: 60, image: "{% static 'seb.jpeg' %}" },
+            { name: "Ken (Barbie)", min: 61, max: 70, image: "{% static 'ken.jpeg' %}" },
+            { name: "Driver (Drive)", min: 71, max: 80, image: "{% static 'drive.jpeg' %}" },
+            { name: "Luke (The Place Beyond the Pines)", min: 81, max: 90, image: "{% static 'luke.jpeg' %}" },
+            { name: "Holland March (The Nice Guys)", min: 91, max: 100, image: "{% static 'march.jpeg' %}" },
+        ];
+
+        let totalScore = 0;
+        let answeredQuestions = 0;
+
+        const answers = document.querySelectorAll('input[type="radio"]:checked');
+        answers.forEach(answer => {
+            totalScore += parseInt(answer.value);
+            answeredQuestions++;
+        });
+
+        if (answeredQuestions === 0) {
+            alert("Please answer at least one question.");
+            return;
+        }
+
+        const averageScore = totalScore / answeredQuestions;
+
+        const character = ranges.find(range => averageScore >= range.min && averageScore <= range.max);
+
+        if (character) {
+            const queryParams = new URLSearchParams({
+                name: character.name,
+                image: character.image,
+                score: averageScore.toFixed(2),
+            }).toString();
+            window.location.href = `/result/?${queryParams}`;
+        } else {
+            alert("Could not determine a character. Please try again.");
+        }
+    });
+</script>
+{% endblock %}
