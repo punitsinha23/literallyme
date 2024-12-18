@@ -126,16 +126,19 @@
         event.preventDefault();
 
         const ranges = [
-            { name: "Travis Bickle", min: 1, max: 10, image: "{% static 'travis.jpeg' %}" },
-            { name: "Tyler Durden", min: 11, max: 20, image: "{% static 'tyler.jpeg' %}" },
-            { name: "Walter White", min: 21, max: 30, image: "{% static 'walt.jpeg' %}" },
-            { name: "Joker", min: 31, max: 40, image: "{% static 'joker.jpeg' %}" },
-            { name: "Saul Goodman", min: 41, max: 45, image: "{% static 'saul.jpeg' %}" },
-            { name: "Sebastian (La La Land)", min: 46, max: 60, image: "{% static 'seb.jpeg' %}" },
-            { name: "Ken (Barbie)", min: 61, max: 70, image: "{% static 'ken.jpeg' %}" },
-            { name: "Driver", min: 71, max: 80, image: "{% static 'drive.jpeg' %}" },
-            { name: "Luke", min: 81, max: 90, image: "{% static 'luke.jpeg' %}" },
-            { name: "Holland March", min: 91, max: 100, image: "{% static 'march.jpeg' %}" },
+            { name: "Travis Bickle", min: 1, max: 5, image: "{% static 'travis.jpeg' %}" },
+            { name: "Tyler Durden", min: 6, max: 15, image: "{% static 'tyler.jpeg' %}" },
+            { name: "Walter White", min: 16, max: 20, image: "{% static 'walt.jpeg' %}" },
+            { name: "Joker", min: 25, max: 25, image: "{% static 'joker.jpeg' %}" },
+            { name: "Saul Goodman", min: 26, max: 30, image: "{% static 'saul.jpeg' %}" },
+            { name: "Sebastian (La La Land)", min: 31, max: 35, image: "{% static 'seb.jpeg' %}" },
+            { name: "Ken (Barbie)", min: 36, max: 40, image: "{% static 'ken.jpeg' %}" },
+            { name: "Driver", min: 41, max: 50, image: "{% static 'drive.jpeg' %}" },
+            { name: "Luke", min: 51, max: 60, image: "{% static 'luke.jpeg' %}" },
+            { name: "Holland March", min: 61, max: 65, image: "{% static 'march.jpeg' %}" },
+            { name: "The Narrator" , min:66 , max: 70 , image:"{% static 'narrator.jpeg' %}" },
+            { name: "Officer K" , min:71 , max: 75 , image:"{% static 'k.jpeg' %}" },
+            { name: "Lars" , min:76 , max: 100 , image:"{% static 'lars.jpeg' %}" },
         ];
 
         const score = Math.floor(Math.random() * 100) + 1;
