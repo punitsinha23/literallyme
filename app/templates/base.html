@@ -3,60 +3,63 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} literally me{% endblock %}</title>
+    <title>{% block title %}Literally Me{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="{% static 'main.css' %}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* Center the image */
-        .center-image {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
 
-        /* Set up container for image */
-        .image-container {
-            position: relative;
-            width: fit-content; /* Adjusts to the size of the image */
-            margin: 0 auto; /* Centers the container on the page */
-        }
-
-        /* Style for the button container */
-        .button-container {
-            position: absolute;
-            bottom: -60px; /* Adjust the distance from the bottom of the image */
-            right: 10px;  /* Adjust the distance from the right edge of the image */
-        }
-
-        .button-container a {
-            margin-top: 10px;
-        }
-    </style>
-
-</head>    
+</head>
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <strong>DAILY SHITPOSTING</strong> 
-        </div>
-    </nav>
-    <div class="header mt-0 mb-0">
-        <h1>WHICH LITREALLY ME CHARACTER ARE YOU ?</h1>
+    <div class="banner-container">
+        <img id="banner" src="{% static 'banner1.jpeg' %}" alt="Banner Image">
     </div>
 
     {% block content %}
-    <div class="image-container">
-        <img src="{% static 'BG.webp' %}" alt="IMAGE" width="300px" height="auto" class="center-image">
-        <div class="button-container">
-            <a href="{% url 'home' %}" type="button" class="btn btn-primary btn-lg fw-bold">FIND OUT NOW!</a>
+    <div class="container">
+        <div class="form-container">
+            <h1>Welcome</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label"><strong>Name</strong></label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="gender" class="form-label"><strong>Gender</strong></label>
+                    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter your gender">
+                </div>
+                <button type="submit" class="submit-btn w-100">Let's Go</button>
+            </form>
         </div>
     </div>
     {% endblock %}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        const images = [
+            "{% static 'banner1.jpeg' %}",
+            "{% static 'banner2.png' %}",
+            "{% static 'banner3.jpeg' %}",
+            "{% static 'banner4.jpeg' %}",
+            "{% static 'banner5.jpeg' %}",
+            "{% static 'banner6.jpeg' %}"
+        ];
+
+        let currentImageIndex = 0; 
+        const banner = document.getElementById("banner");
+
+        function changeImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length; 
+            banner.src = images[currentImageIndex];
+        }
+
+        // Change image every 3 seconds
+        setInterval(changeImage, 3000);
+    </script>
 </body>
 </html>
