@@ -9,27 +9,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-
 </head>
+<style>
+    /* main.css */
+body {
+    background-color:  rgb(199, 157, 238); /* Light gray background for the body */
+    font-family: 'Oswald', sans-serif; /* Use Oswald font */
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #333;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 0 auto; 
+    border-radius: 15px;
+    background-color: rgb(187, 114, 254);
+}
+
+</style>
 <body>
-    <div class="banner-container">
-        <img id="banner" src="{% static 'banner1.jpeg' %}" alt="Banner Image">
-    </div>
 
     {% block content %}
+    <div class="banner-container">
+        <div class="banner-container" style="text-align: center;">
+            <img id="banner" src="{% static 'banner1.jpeg' %}" alt="Banner Image" class="img-fluid" style="max-height: 1010px; max-width: 1010px; display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        
+        
+    </div>
     <div class="container">
-        <div class="form-container">
-            <h1>Welcome</h1>
-            <form>
+        <div class="form-container  p-4 shadow rounded-3">
+            <h1 class="text-center mb-4">Welcome</h1>
+            <form method="POST" action="{% url 'home' %}">
+                {% csrf_token %}
                 <div class="mb-3">
                     <label for="name" class="form-label"><strong>Name</strong></label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Enter your name">
                 </div>
-                <div class="mb-3">
-                    <label for="gender" class="form-label"><strong>Gender</strong></label>
-                    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter your gender">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Let's Go</button>
                 </div>
-                <button type="submit" class="submit-btn w-100">Let's Go</button>
             </form>
         </div>
     </div>
@@ -38,28 +61,5 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <!-- Custom JavaScript -->
-    <script>
-        const images = [
-            "{% static 'banner1.jpeg' %}",
-            "{% static 'banner2.png' %}",
-            "{% static 'banner3.jpeg' %}",
-            "{% static 'banner4.jpeg' %}",
-            "{% static 'banner5.jpeg' %}",
-            "{% static 'banner6.jpeg' %}"
-        ];
-
-        let currentImageIndex = 0; 
-        const banner = document.getElementById("banner");
-
-        function changeImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length; 
-            banner.src = images[currentImageIndex];
-        }
-
-        // Change image every 3 seconds
-        setInterval(changeImage, 3000);
-    </script>
 </body>
 </html>

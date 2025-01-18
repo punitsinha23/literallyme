@@ -3,10 +3,11 @@
 {% block title %} Quiz Page {% endblock %}
 
 {% block content %}
+<h1 style="color:rgb(133, 35, 225);; margin-top: 50px;">welcome {{name}}</h1>
 <div style="max-width: 800px; margin: auto; padding: 20px; font-family: Arial, sans-serif;">
     <form id="quizForm" , method="POST" , action="/result">
         <!-- Question 1 -->
-        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
+        <div style="margin-bottom: 20px; padding: 15px; border: 1px solid; background-color: rgb(187, 114, 254); ; border-radius: 5px; background-color: #f9f9f9;">
             <p style="font-size: 16px; font-weight: bold;">How do you spend your ideal weekend?</p>
             <ul style="list-style: none; padding: 0;">
                 <li style="margin: 8px 0;"><input type="radio" name="q1"> Alone, catching up on reading or reflecting</li>

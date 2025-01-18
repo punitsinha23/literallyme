@@ -5,7 +5,9 @@ def base(request):
     return render (request , "base.html")
 
 def home(request):
-    return render(request , 'home.html')
+    if request.method == "POST":
+        name = request.POST.get('name')
+    return render(request , 'home.html', {'name':name} )
 
 def result_view(request):
     name = request.GET.get('name', 'Unknown')
