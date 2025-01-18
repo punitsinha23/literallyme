@@ -33,6 +33,7 @@
             text-align: center;
             width: 100%;
             height: auto;
+            margin-bottom: 30px; /* Add margin below the banner */
         }
 
         #banner {
@@ -63,7 +64,7 @@
             <h1 class="text-center mb-4">Welcome</h1>
             <form method="POST" action="{% url 'home' %}">
                 {% csrf_token %}
-                <div class="mb-3">
+                <div class="mb-3 mt-4">
                     <label for="name" class="form-label"><strong>Name</strong></label>
                     <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Enter your name">
                 </div>
