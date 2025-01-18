@@ -9,40 +9,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        /* main.css */
+        body {
+            background-color: rgb(199, 157, 238); /* Light gray background for the body */
+            font-family: 'Oswald', sans-serif; /* Use Oswald font */
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 15px;
+            background-color: rgb(187, 114, 254);
+        }
+
+        .banner-container {
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+
+        #banner {
+            max-width: 100%; /* Ensures image doesn't overflow */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            #banner {
+                max-height: 400px; /* Adjust max height for smaller devices */
+            }
+        }
+
+    </style>
 </head>
-<style>
-    /* main.css */
-body {
-    background-color:  rgb(199, 157, 238); /* Light gray background for the body */
-    font-family: 'Oswald', sans-serif; /* Use Oswald font */
-}
-
-h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 3rem;
-    color: #333;
-}
-
-.form-container {
-    max-width: 500px;
-    margin: 0 auto; 
-    border-radius: 15px;
-    background-color: rgb(187, 114, 254);
-}
-
-</style>
 <body>
 
     {% block content %}
     <div class="banner-container">
-        <div class="banner-container" style="text-align: center;">
-            <img id="banner" src="{% static 'banner1.jpeg' %}" alt="Banner Image" class="img-fluid" style="max-height: 1010px; max-width: 1010px; display: block; margin-left: auto; margin-right: auto;">
-        </div>
-        
-        
+        <img id="banner" src="{% static 'banner1.jpeg' %}" alt="Banner Image" class="img-fluid">
     </div>
+
     <div class="container">
-        <div class="form-container  p-4 shadow rounded-3">
+        <div class="form-container p-4 shadow rounded-3">
             <h1 class="text-center mb-4">Welcome</h1>
             <form method="POST" action="{% url 'home' %}">
                 {% csrf_token %}
